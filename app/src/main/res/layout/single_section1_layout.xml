@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_150sdp"
+    android:layout_height="@dimen/_200sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardElevation="@dimen/_15sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/section1_new_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <ImageView
+                android:id="@+id/singleSection1_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:src="@drawable/demo_car"
+                android:scaleType="fitCenter"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/singleSection1_company"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BMW"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/singleSection1_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="M3 2020"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:gravity="center"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

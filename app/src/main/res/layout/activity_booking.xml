@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".bookingActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp">
+
+        <ImageView
+            android:id="@+id/booking_imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/demo_car"/>
+
+        <LinearLayout
+            android:layout_toLeftOf="@id/booking_imageView"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/booking_company"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMW"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/_22sdp"
+                />
+
+            <TextView
+                android:id="@+id/booking_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M3 2018"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/one"
+        android:theme="@style/customTIL"
+        android:id="@+id/booking_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:textColorHint="@color/colorAccent"
+        app:startIconTint="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:editable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00ffffff"
+            android:hint="Available City"
+            android:text="London"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="#FFFFFF"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardElevation="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_below="@id/booking_city">
+
+        <fragment
+            android:id="@+id/booking_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/two"
+        android:theme="@style/customTIL"
+        android:id="@+id/booking_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:textColorHint="@color/colorAccent"
+        app:startIconTint="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:editable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00ffffff"
+            android:hint="Scheduled Pick Up Date"
+            android:text="Click to select the date"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="#FFFFFF"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/booking_conform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/booking_date"
+        android:text="Accept all the Terms and Conditions"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/_5sdp"/>
+
+    <Button
+        android:id="@+id/booking_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/booking_conform"
+        android:text="Confirm Booking"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16sdp"
+        android:background="@drawable/btn_bg3"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="@dimen/_15sdp"/>
+
+
+
+</RelativeLayout>

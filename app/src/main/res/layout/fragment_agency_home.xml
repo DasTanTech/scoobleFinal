@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    tools:context=".agencyFragments.agencyHomeFragment">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Agency \nCars"
+                android:layout_margin="@dimen/_20sdp"
+                android:textSize="@dimen/_30sdp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/agencyHomeFrag_addCarBtn"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                app:fabCustomSize="@dimen/_32sdp"
+                android:src="@drawable/ic_plus"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:layout_margin="@dimen/_20sdp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/agencyHomeFrag_RCV"
+            android:layout_below="@id/one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+
+
+
+</ScrollView>

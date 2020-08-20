@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/_15sdp"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:background="@drawable/new_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/singleBookingLayout_imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/demo_car"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_toLeftOf="@id/singleBookingLayout_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/singleBookingLayout_company"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMW"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:textSize="@dimen/_22sdp"
+                />
+
+            <TextView
+                android:id="@+id/singleBookingLayout_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M3 2018"
+                android:textColor="@color/colorText2"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/singleBookingLayout_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/singleBookingLayout_city"
+                android:layout_margin="@dimen/_5sdp"
+                android:theme="@style/customTIL"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorWhite"
+                app:startIconTint="#FFFFFF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:editable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00ffffff"
+                    android:hint="PickUp Place"
+                    android:text="London"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/singleBookingLayout_date"
+                android:layout_margin="@dimen/_5sdp"
+                android:theme="@style/customTIL"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorPrimary"
+                app:startIconTint="#FFFFFF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:editable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00ffffff"
+                    android:hint="PickUp Date"
+                    android:text="23 Aug"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

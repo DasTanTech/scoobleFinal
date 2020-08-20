@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardElevation="@dimen/_15sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:background="@drawable/new_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp">
+
+        <ImageView
+            android:id="@+id/singleCarLayout_imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/demo_car"/>
+
+        <LinearLayout
+            android:layout_toLeftOf="@id/singleCarLayout_imageView"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/singleCarLayout_company"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMW"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:textSize="@dimen/_22sdp"
+                />
+
+            <TextView
+                android:id="@+id/singleCarLayout_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M3 2018"
+                android:textColor="@color/colorText2"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

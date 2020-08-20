@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".bookingConfirmationActivity">
+
+    <LinearLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Booking Confirmed"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_checked"
+            android:layout_margin="@dimen/_15sdp"/>
+
+        <TextView
+            android:id="@+id/conformBooking_BID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booking Id: "
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorVibrant"
+            android:gravity="center"/>
+
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/new_bg2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp">
+
+            <ImageView
+                android:id="@+id/conformBooking_imageView"
+                android:layout_alignParentEnd="true"
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/demo_car"/>
+
+            <LinearLayout
+                android:layout_toLeftOf="@id/conformBooking_imageView"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/conformBooking_company"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BMW"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_22sdp"
+                    />
+
+                <TextView
+                    android:id="@+id/conformBooking_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M3 2018"
+                    android:textColor="@color/colorText2"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"/>
+
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+        <LinearLayout
+
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/conformBooking_city"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="-"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:backgroundTint="#00ffffff"
+                    android:textColorHint="@color/colorText2"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Date"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/conformBooking_date"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="-"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:backgroundTint="#00ffffff"
+                    android:textColorHint="@color/colorText2"/>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_above="@id/two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/one"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardElevation="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <fragment
+            android:id="@+id/conformBooking_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/two"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agent Name"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/conformBooking_agencyName"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="-"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:backgroundTint="#00ffffff"
+                android:textColorHint="@color/colorText2"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agent Contact"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/conformBooking_agencyContact"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="-"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:backgroundTint="#00ffffff"
+                android:textColorHint="@color/colorText2"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

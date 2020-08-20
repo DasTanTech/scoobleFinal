@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367188751615",
+    "firebase_url": "https://scooble-b1fff.firebaseio.com",
+    "project_id": "scooble-b1fff",
+    "storage_bucket": "scooble-b1fff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367188751615:android:f922f963d10d840089c8ca",
+        "android_client_info": {
+          "package_name": "com.uk.ac.tees.w9214627.scooble"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367188751615-aeli5kqolfjuk8lgbtssbojukvhqu40u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uk.ac.tees.w9214627.scooble",
+            "certificate_hash": "5028d913c8215a20b0ed4e276d80e22532f9022c"
+          }
+        },
+        {
+          "client_id": "367188751615-r4a39leoug6o9in92qfr7lf4rt0l8nir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt-smGDImTJeMbFYLgm3wBz9O9JG8DZdI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367188751615-r4a39leoug6o9in92qfr7lf4rt0l8nir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

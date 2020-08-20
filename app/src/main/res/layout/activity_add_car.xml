@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".addCarActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginTop="@dimen/_85sdp"
+                android:layout_marginBottom="@dimen/_45sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="270"
+                android:text="New Car"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_40sdp"
+                android:textStyle="bold"
+                android:layout_marginLeft="-60dp"
+                android:layout_marginRight="-40dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp">
+
+                <ImageView
+                    android:id="@+id/addCar_imageView"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/default_car_pic"/>
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addCar_company"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textColorHint="@color/colorText2"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="Car Company"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="@color/colorText2"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addCar_model"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textColorHint="@color/colorText2"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="Car Model"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="@color/colorText2"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addCar_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:textColorHint="@color/colorText2"
+        app:startIconTint="#FFFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00ffffff"
+            android:hint="Car Description"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="@color/colorText2"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Speed"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/addCar_speed"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="km/h "
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:backgroundTint="#00ffffff"
+                    android:textColorHint="@color/colorText2"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seats"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/addCar_seats"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="-"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:backgroundTint="#00ffffff"
+                    android:textColorHint="@color/colorText2"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Engine"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/addCar_engine"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="-"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:backgroundTint="#00ffffff"
+                    android:textColorHint="@color/colorText2"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addCar_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textColorHint="@color/colorText2"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="City"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="@color/colorText2"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Latitude"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/addCar_lat"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="-"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:backgroundTint="#00ffffff"
+                    android:textColorHint="@color/colorText2"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Longitude"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/addCar_lng"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="-"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:backgroundTint="#00ffffff"
+                    android:textColorHint="@color/colorText2"/>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Price:     "
+                android:gravity="end"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                />
+
+            <EditText
+                android:id="@+id/addCar_price"
+                android:inputType="number"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="per month"
+                android:gravity="start"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                android:textSize="@dimen/_20sdp"
+                android:backgroundTint="#00ffffff"
+                android:textColorHint="@color/colorText2"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addCar_btn"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Add car"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

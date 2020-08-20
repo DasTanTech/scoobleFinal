@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/login_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="@dimen/_65sdp"
+            android:layout_marginBottom="@dimen/_45sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="270"
+            android:text="Update \nProfile"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_40sdp"
+            android:textStyle="bold"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginRight="-40dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/editProfileFrag_imageView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:src="@drawable/defualt_edit_profile"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="2dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/login_one">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:theme="@style/customTIL"
+            android:id="@+id/editProfileFrag_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textColorHint="@color/colorAccent"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="Name"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textColorHighlight="#FFFFFF"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editProfileFrag_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textColorHint="@color/colorAccent"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="Email"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textColorHighlight="#FFFFFF"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editProfileFrag_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textColorHint="@color/colorAccent"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="Phone"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textColorHighlight="#FFFFFF"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editProfileFrag_dob"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textColorHint="@color/colorAccent"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="Date of Birth"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textColorHighlight="#FFFFFF"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/editProfileFrag_updateBtn"
+                android:elevation="@dimen/_15sdp"
+                android:background="@drawable/btn_bg3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:textSize="@dimen/_15sdp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/_15sdp"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
